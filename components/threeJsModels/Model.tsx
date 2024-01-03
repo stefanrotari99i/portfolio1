@@ -33,7 +33,7 @@ export function Model(props) {
         scale={scale}
         position={[0, 0, 0]}
         rotation={[0, 0, 0]}
-        rotateY={rotateY}
+        rotateY={rotateY.get()} // Pass the value of rotateY as a number
       >
         <motion.group rotation={[-Math.PI / 2, 0, 0]} scale={120}>
           <mesh
