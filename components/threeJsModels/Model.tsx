@@ -1,3 +1,4 @@
+/* trunk-ignore-all(prettier) */
 import { easeInOut, useSpring, useTransform } from "framer-motion";
 
 import { motion } from "framer-motion-3d";
@@ -5,7 +6,7 @@ import { useGLTF } from "@react-three/drei";
 import { useScroll } from "framer-motion";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/models/untitled.glb");
+  const { nodes, materials } = useGLTF("/models/untitled.glb") as any;
   const { scrollYProgress } = useScroll({
     offset: ["start start", "end start"],
   });
@@ -45,7 +46,7 @@ export function Model(props) {
           <mesh
             castShadow
             receiveShadow
-            geometry={nodes?.body_Material002_0?.geometry}
+            geometry={nodes?.body_Material002_0.geometry}
             material={materials["Material.002"]}
           />
         </motion.group>
