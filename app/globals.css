@@ -20,6 +20,14 @@
   }
 }
 
+@media only screen and (max-device-width : 768px) {
+
+  html,
+  body {
+    display: none;
+  }
+}
+
 *,
 *::before,
 *::after {
